@@ -1,0 +1,52 @@
+---
+title       : Test use of Slidify
+subtitle    : For reporting
+author      : Colin Phillips
+job         : Optimisation Analyst
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
+---
+
+## Read-And-Delete
+
+1. Edit YAML front matter
+2. Write using R Markdown
+3. Use an empty line followed by three dashes to separate slides!
+
+--- .class #id 
+
+## Slide 1
+
+Animated list
+
+> 1. Look
+> 2. At
+> 3. This!!!
+
+---
+
+### Motion chart
+
+```{r echo = F,results = 'asis', message = T}
+require(googleVis)
+M1 = gvisMotionChart(Fruits, idvar = 'Fruit', timevar = "Year")
+print(M1,tag = 'chart')
+```
+
+
+---
+### Plotly test
+```{r, echo = F, results='asis'}
+library("knitr")
+library("devtools")
+url<-"https://plot.ly/~MattSundquist/1971"
+plotly_iframe <- paste("<center><iframe scrolling='no' seamless='seamless' style='border:none' src='", url, 
+    "/800/1200' width='800' height='1200'></iframe><center>", sep = "")
+ 
+```
+`r I(plotly_iframe)`
