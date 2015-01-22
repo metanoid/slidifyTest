@@ -44,7 +44,7 @@ print(M1,tag = 'chart')
 ```{r, echo = F, results='asis'}
 library("knitr")
 library("devtools")
-url<-"https://plot.ly/~MattSundquist/1971"
+url<-"https://plot.ly/~metanoid/38"
 plotly_iframe <- paste("<center><iframe scrolling='no' seamless='seamless' style='border:none' src='", url, 
     "/800/1200' width='800' height='1200'></iframe><center>", sep = "")
  
